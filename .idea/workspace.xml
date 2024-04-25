@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="01101f23-3c87-4159-b352-936a9f833c40" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/G7 LMS.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/librarians.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookClass/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookClass/Borrow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookClass/Genre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookClass/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookClass/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screens/AddBookScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screens/BookScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screens/CartScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screens/GenerateReportScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screens/HomeScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screens/LibrarianScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screens/LoginScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screens/ProfileScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screens/SignupScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screens/UpdateBookScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UserClass/Author.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UserClass/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UserClass/Librarian.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UserClass/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/books.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/borrowedbooks.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/BookClass/Book.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/Screens/SignupScreen.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2fY0JXa5MfkbqeMhG0OTu95Wjpg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.AddBookScreen.executor": "Run",
+    "Application.BookScreen.executor": "Run",
+    "Application.CartScreen.executor": "Run",
+    "Application.GenerateReportScreen.executor": "Run",
+    "Application.HomeScreen.executor": "Run",
+    "Application.LibrarianScreen.executor": "Run",
+    "Application.LoginScreen.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.ProfileScreen.executor": "Run",
+    "Application.SignupScreen.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.UpdateBookScreen.executor": "Run",
+    "Application.test.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.test">
+    <configuration name="LoginScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Screens.LoginScreen" />
+      <module name="G7 LMS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Screens.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignupScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Screens.SignupScreen" />
+      <module name="G7 LMS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Screens.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="G7 LMS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UpdateBookScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Screens.UpdateBookScreen" />
+      <module name="G7 LMS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Screens.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="G7 LMS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.LoginScreen" />
+        <item itemvalue="Application.SignupScreen" />
+        <item itemvalue="Application.UpdateBookScreen" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01101f23-3c87-4159-b352-936a9f833c40" name="Changes" comment="" />
+      <created>1713962659295</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713962659295</updated>
+      <workItem from="1713962662282" duration="9866000" />
+      <workItem from="1713976745700" duration="4086000" />
+      <workItem from="1714036588094" duration="43604000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Screens/SignupScreen.java</url>
+          <line>38</line>
+          <properties class="Screens.SignupScreen" method="initComponents">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="14" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
