@@ -36,6 +36,10 @@ public class Book implements Serializable{
         this.description=description;
         this.imagePath= null;
     }
+
+    public Book() {
+
+    }
     // Getter methods
 
     public Double getTotalFare() {

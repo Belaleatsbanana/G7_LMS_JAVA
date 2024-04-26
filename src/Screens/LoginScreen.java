@@ -153,7 +153,7 @@ public class LoginScreen extends javax.swing.JFrame {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        Inventory.initInventory();
+
         try {
             FileInputStream librarianFileReader = new FileInputStream("librarians.txt");
             DataInputStream librarianFile = new DataInputStream(librarianFileReader);

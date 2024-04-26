@@ -1,6 +1,8 @@
 
 package Screens;
 
+import BookClass.Book;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -13,8 +15,8 @@ public class GenerateReportScreen extends javax.swing.JFrame {
     /**
      * Creates new form GenerateReportScreen
      */
-    public GenerateReportScreen() {
-        initComponents();
+    public GenerateReportScreen(Book book) {
+        initComponents();this.book = book;
     }
 
     /**
@@ -182,8 +184,24 @@ public class GenerateReportScreen extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new GenerateReportScreen().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new GenerateReportScreen(new Book()).setVisible(true));
     }
-
+    Book book;
+    JLabel reportHeaderLabel = new JLabel();
+    JLabel bookImageLabel = new JLabel();
+    JTextField bookISBNTextField = new JTextField();
+    JLabel bookTitleLabel = new JLabel();
+    JTextField bookTitleTextField = new JTextField();
+    JLabel bookAuthorLabel = new JLabel();
+    JTextField bookAuthorTextField = new JTextField();
+    JLabel bookGenreLabel = new JLabel();
+    JTextField bookGenreTextField = new JTextField();
+    JLabel isbnLabel = new JLabel();
+    JLabel bookFareLabel = new JLabel();
+    JTextField totalBookFareTextField = new JTextField();
+    JLabel totalBookingLabel = new JLabel();
+    JTextField totalBookFareTextField1 = new JTextField();
+    JLabel totalFareLabel = new JLabel();
+    JTextField totalFareTextField = new JTextField();
     // End of variables declaration
 }

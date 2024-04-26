@@ -1,20 +1,28 @@
 
 package Screens;
 
+import BookClass.Book;
+import BookClass.Genre;
+import BookClass.Status;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.Objects;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *A
  * @author belal
  */
-public class UpdateBookScreen extends javax.swing.JFrame {
+public class UpdateBookScreen extends JFrame {
 
     /**
      * Creates new form UpdateBookScreen
      */
-    public UpdateBookScreen() {
-        initComponents();
+    public UpdateBookScreen(Book book) {
+        initComponents();this.book = book;
     }
 
     /**
@@ -44,44 +52,45 @@ public class UpdateBookScreen extends javax.swing.JFrame {
         JLabel imagePathLabel = new JLabel();
         JTextField imagePathTextField = new JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        updateBookHeader.setFont(new java.awt.Font("Segue UI", Font.BOLD, 18)); // NOI18N
+        updateBookHeader.setFont(new Font("Segue UI", Font.BOLD, 18)); // NOI18N
         updateBookHeader.setText("Update Book");
 
-        genreLabel.setFont(new java.awt.Font("Segue UI", Font.PLAIN, 14)); // NOI18N
-        genreLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        genreLabel.setFont(new Font("Segue UI", Font.PLAIN, 14)); // NOI18N
+        genreLabel.setHorizontalAlignment(SwingConstants.CENTER);
         genreLabel.setText("Genre");
 
-        titleLabel.setFont(new java.awt.Font("Segue UI", Font.PLAIN, 14)); // NOI18N
-        titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleLabel.setFont(new Font("Segue UI", Font.PLAIN, 14)); // NOI18N
+        titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
         titleLabel.setText("Title");
 
-        descLabel.setFont(new java.awt.Font("Segue UI", Font.PLAIN, 14)); // NOI18N
-        descLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        descLabel.setFont(new Font("Segue UI", Font.PLAIN, 14)); // NOI18N
+        descLabel.setHorizontalAlignment(SwingConstants.CENTER);
         descLabel.setText("Description");
 
-        availabilityComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        availabilityLabel.setFont(new java.awt.Font("Segue UI", Font.PLAIN, 14)); // NOI18N
-        availabilityLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        availabilityComboBox.setModel(new DefaultComboBoxModel<>(new String[] {"AVAILABLE", "UNAVAILABLE", "BORROWED", "LATE", "LOST", "DAMAGED"}));
+        // AVAILABLE, UNAVAILABLE, BORROWED, LATE, LOST, DAMAGED
+        availabilityLabel.setFont(new Font("Segue UI", Font.PLAIN, 14)); // NOI18N
+        availabilityLabel.setHorizontalAlignment(SwingConstants.CENTER);
         availabilityLabel.setText("Availability");
 
-        keywordLabel.setFont(new java.awt.Font("Segue UI", Font.PLAIN, 14)); // NOI18N
-        keywordLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        keywordLabel.setFont(new Font("Segue UI", Font.PLAIN, 14)); // NOI18N
+        keywordLabel.setHorizontalAlignment(SwingConstants.CENTER);
         keywordLabel.setText("Keywords");
 
-        authorLabel.setFont(new java.awt.Font("Segue UI", Font.PLAIN, 14)); // NOI18N
-        authorLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        authorLabel.setFont(new Font("Segue UI", Font.PLAIN, 14)); // NOI18N
+        authorLabel.setHorizontalAlignment(SwingConstants.CENTER);
         authorLabel.setText("Authors");
 
         keywordTextArea.setColumns(20);
         keywordTextArea.setRows(5);
         keywordScrollPanel.setViewportView(keywordTextArea);
 
-        genreComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        genreComboBox.setModel(new DefaultComboBoxModel<>(new String[] { "NONE","HISTORY", "PHILOSOPHY"
+                , "SCIENCE", "FICTION","MYSTERY","ROMANCE","HORROR","FANTASY","COOKING","ART","MUSIC","SPORTS","OTHER" }));
 
-        confirmUpdateBookButton.setFont(new java.awt.Font("Segue UI", Font.BOLD, 14)); // NOI18N
+        confirmUpdateBookButton.setFont(new Font("Segue UI", Font.BOLD, 14)); // NOI18N
         confirmUpdateBookButton.setText("Confirm");
         confirmUpdateBookButton.addActionListener(this::ConfirmUpdateBookButtonActionPerformed);
 
@@ -89,105 +98,142 @@ public class UpdateBookScreen extends javax.swing.JFrame {
         descTextArea.setRows(5);
         descScrollPanel.setViewportView(descTextArea);
 
-        imagePathLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        imagePathLabel.setHorizontalAlignment(SwingConstants.CENTER);
         imagePathLabel.setText("Image Path");
 
-        imagePathTextField.addActionListener(this::imagePathTextFieldActionPerformed);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGap(212, 212, 212)
                                                 .addComponent(updateBookHeader))
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGap(218, 218, 218)
-                                                .addComponent(confirmUpdateBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(confirmUpdateBookButton, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE))
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGap(23, 23, 23)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                                         .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(imagePathLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(imagePathTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
+                                                                .addComponent(imagePathLabel, GroupLayout.PREFERRED_SIZE, 72, GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(imagePathTextField, GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE))
                                                         .addGroup(layout.createSequentialGroup()
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                                        .addComponent(descLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
-                                                                        .addComponent(genreLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                        .addComponent(titleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                                        .addComponent(genreComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, 132, Short.MAX_VALUE)
-                                                                        .addComponent(descScrollPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
+                                                                        .addComponent(descLabel, GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                                                                        .addComponent(genreLabel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                        .addComponent(titleLabel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
+                                                                        .addComponent(genreComboBox, GroupLayout.Alignment.LEADING, 0, 132, Short.MAX_VALUE)
+                                                                        .addComponent(descScrollPanel, GroupLayout.Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                                                                         .addComponent(bookTitleTextField))))
                                                 .addGap(40, 40, 40)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                                .addComponent(authorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                                        .addGroup(GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                                .addComponent(authorLabel, GroupLayout.PREFERRED_SIZE, 78, GroupLayout.PREFERRED_SIZE)
                                                                 .addGap(18, 18, 18)
-                                                                .addComponent(authorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addComponent(authorTextField, GroupLayout.PREFERRED_SIZE, 140, GroupLayout.PREFERRED_SIZE))
                                                         .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(keywordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(keywordLabel, GroupLayout.PREFERRED_SIZE, 78, GroupLayout.PREFERRED_SIZE)
                                                                 .addGap(18, 18, 18)
-                                                                .addComponent(keywordScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addComponent(keywordScrollPanel, GroupLayout.PREFERRED_SIZE, 140, GroupLayout.PREFERRED_SIZE))
                                                         .addGroup(layout.createSequentialGroup()
-                                                                .addComponent(availabilityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(availabilityLabel, GroupLayout.PREFERRED_SIZE, 78, GroupLayout.PREFERRED_SIZE)
                                                                 .addGap(18, 18, 18)
-                                                                .addComponent(availabilityComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                                .addComponent(availabilityComboBox, GroupLayout.PREFERRED_SIZE, 138, GroupLayout.PREFERRED_SIZE)))))
                                 .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(24, 24, 24)
                                 .addComponent(updateBookHeader)
                                 .addGap(60, 60, 60)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(bookTitleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(titleLabel, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(bookTitleTextField, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE))
                                                 .addGap(10, 10, 10)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(genreComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(genreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(genreComboBox, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(genreLabel, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE))
                                                 .addGap(26, 26, 26)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(descLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(descScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                                        .addComponent(descLabel, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(descScrollPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(authorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(authorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(authorLabel, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(authorTextField, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE))
                                                 .addGap(9, 9, 9)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(availabilityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(availabilityComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(availabilityLabel, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(availabilityComboBox, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE))
                                                 .addGap(26, 26, 26)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(keywordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(keywordScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                                        .addComponent(keywordLabel, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(keywordScrollPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                         .addComponent(imagePathLabel)
-                                        .addComponent(imagePathTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(imagePathTextField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addGap(13, 13, 13)
-                                .addComponent(confirmUpdateBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(confirmUpdateBookButton, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE)
                                 .addGap(31, 31, 31))
         );
 
         pack();
     }// </editor-fold>
 
-    private void ConfirmUpdateBookButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    private void ConfirmUpdateBookButtonActionPerformed(ActionEvent evt) {
         // TODO add your handling code here:
-    }
+        if(!bookTitleTextField.getText().isBlank())
+        {
+            book.setTitle(bookTitleTextField.getText());
+        }
+        if(!authorTextField.getText().isBlank())
+        {
+            book.setAuthor(authorTextField.getText());
+        }
 
-    private void imagePathTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+
+
+        Genre genre = null;
+
+        try {
+            for (Genre g : Genre.values()) {
+                if (g.toString().equals(Objects.requireNonNull(genreComboBox.getSelectedItem()).toString()))
+                    genre = g;
+            }
+            book.setGenreType(genre);
+        }catch(NullPointerException npe){
+            JOptionPane.showMessageDialog(null, "Something went wrong when selecting a genre", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+
+
+        Status status = null;
+
+        try{
+            for(Status s: Status.values())
+                if(s.toString().equals(availabilityComboBox.getSelectedItem().toString()))
+                    status = s;
+            book.setAvailability(status);
+        }catch(NullPointerException npe){
+            JOptionPane.showMessageDialog(null, "Something went wrong when selecting an availability status", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+
+        if(!descTextArea.getText().isBlank())
+            book.setDescription(descTextArea.getText());
+
+        if(!imagePathTextField.getText().isBlank())
+            book.setImagePath(imagePathTextField.getText());
+
     }
 
     /**
@@ -196,21 +242,40 @@ public class UpdateBookScreen extends javax.swing.JFrame {
     public static void main(String[] args) {
 
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException |
                  UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(UpdateBookScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(UpdateBookScreen.class.getName()).log(Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new UpdateBookScreen().setVisible(true));
+        EventQueue.invokeLater(() -> new UpdateBookScreen(new Book()).setVisible(true));
     }
-
+    Book book;
+    JLabel updateBookHeader = new JLabel();
+    JLabel genreLabel = new JLabel();
+    JLabel titleLabel = new JLabel();
+    JLabel descLabel = new JLabel();
+    JComboBox<String> availabilityComboBox = new JComboBox<>();
+    JLabel availabilityLabel = new JLabel();
+    JLabel keywordLabel = new JLabel();
+    JLabel authorLabel = new JLabel();
+    JScrollPane keywordScrollPanel = new JScrollPane();
+    JTextArea keywordTextArea = new JTextArea();
+    JTextField bookTitleTextField = new JTextField();
+    JTextField authorTextField = new JTextField();
+    JComboBox<String> genreComboBox = new JComboBox<>();
+    // Variables declaration - do not modify
+    JButton confirmUpdateBookButton = new JButton();
+    JScrollPane descScrollPanel = new JScrollPane();
+    JTextArea descTextArea = new JTextArea();
+    JLabel imagePathLabel = new JLabel();
+    JTextField imagePathTextField = new JTextField();
     // End of variables declaration
 }

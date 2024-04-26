@@ -17,24 +17,28 @@ public class Inventory{
     public static void initInventory()
     {
         // TODO : File handling for everything
-        /*try {
-            FileInputStream reader= new FileInputStream("books.txt");
-            ObjectInputStream bookFile = new ObjectInputStream(reader);
+        try {
+            FileInputStream bookReader= new FileInputStream("./books.txt");
+            ObjectInputStream bookFile = new ObjectInputStream(bookReader);
 
             books = (ArrayList<Book>) bookFile.readObject();
 
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
-        }*/
+        }
         try{
             FileInputStream customerReader= new FileInputStream("./customers.txt");
             ObjectInputStream customerFile = new ObjectInputStream(customerReader);
 
             customers = (ArrayList<Customer>)customerFile.readObject();
-            System.out.println("DONE WRITING CUSTOMERS");
-            for(Customer c: customers){
-                System.out.println(c.getUsername() + " " + c.getEmail());
-            }
+        } catch (IOException | ClassNotFoundException ioe){
+            throw new RuntimeException(ioe);
+        }
+        try{
+            FileInputStream borrowReader= new FileInputStream("./borrowedBooks.txt");
+            ObjectInputStream borrowFile = new ObjectInputStream(borrowReader);
+
+            borrowedBooks = (ArrayList<Borrow>)borrowFile.readObject();
         } catch (IOException | ClassNotFoundException ioe){
             throw new RuntimeException(ioe);
         }
