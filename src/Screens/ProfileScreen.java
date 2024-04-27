@@ -87,9 +87,13 @@ public class ProfileScreen extends javax.swing.JFrame {
 
         changeDOBButton.setText("Change");
 
+        changeDOBButton.addActionListener(this::changeDOBButtonActionPerformed);
+
         changePasswordLabel.setText("Change Password?");
 
         changePasswordButton.setText("Change Password");
+
+        changePasswordButton.addActionListener(this::changePasswordButtonActionPerformed);
 
         cartButton.setText("Cart");
 
@@ -278,7 +282,67 @@ public class ProfileScreen extends javax.swing.JFrame {
     }
 
     private void changeGenderButtonActionPerformed(java.awt.event.ActionEvent evt){
+        String newgender = JOptionPane.showInputDialog("enter your new gender you gay fuck");
+        if(newgender.equalsIgnoreCase("male")||newgender.equalsIgnoreCase("female")){
+            genderTextField.setText(newgender);
+            customer.setGender(newgender);
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"are you a male or a female");
+        }
+    }
+    private void changeDOBButtonActionPerformed(java.awt.event.ActionEvent evt){
 
+            String day=JOptionPane.showInputDialog("enter your day of birth");
+            String month=JOptionPane.showInputDialog("enter your month of birth");
+            String year=JOptionPane.showInputDialog("enter your year of birth");
+
+            if(isValidDay(day)&&isValidMonth(month)&&isValidYear(year)){
+            LocalDate newDOB= LocalDate.of(Integer.parseInt(year),Integer.parseInt(month),Integer.parseInt(day));
+                customer.setDateOfBirth(newDOB);
+                dobTextField.setText(customer.getDateOfBirth().toString());
+            }
+            else {
+                JOptionPane.showMessageDialog(null,"invalid date");
+            }
+    }
+
+    private void changePasswordButtonActionPerformed(java.awt.event.ActionEvent evt){
+
+    }
+
+    //verifications
+    private boolean isValidDay (String day){
+        try{
+            if(Integer.parseInt(day)>=1&&Integer.parseInt(day)<=31){
+                return true;
+            }
+        }
+        catch(Exception e)
+        {
+            return false;
+        }
+        return false;
+    }
+    private boolean isValidMonth(String month){
+        try {
+            if (Integer.parseInt(month) >= 1 && Integer.parseInt(month) <= 12) {
+                return true;
+            }
+        }catch(Exception e){
+            return false;
+        }
+        return false;
+    }
+    private boolean isValidYear(String year) {
+        try {
+            if (Integer.parseInt(year) >= 1950 && Integer.parseInt(year) <= 2020) {
+                return true;
+            }
+        } catch (Exception e) {
+            return false;
+        }
+        return false;
     }
     private boolean isValidPhoneNumber(String phoneNo){
 

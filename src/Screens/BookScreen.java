@@ -7,6 +7,7 @@ import UserClass.Customer;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -74,7 +75,7 @@ public class BookScreen extends javax.swing.JFrame {
         signupButton.setText("Sign up");
 
         cartButton.setText("Cart");
-        //cartButton.addActionListener(this::addToCartActionPerformed);
+        cartButton.addActionListener(this::addToCartActionPerformed);
         //  we will make youssef host!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         logoButton.setText("logo");
 
@@ -220,6 +221,33 @@ public class BookScreen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }
 
+    private void addToCartActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        if(customer == null){
+            int choice;
+            choice = JOptionPane.showConfirmDialog(null,
+                   "You are not logged in! \nWould you like to log in?","Error",JOptionPane.YES_NO_OPTION);
+
+            if(choice == 1){
+                new LoginScreen();
+            }
+            else{
+                return;
+            }
+        }
+
+        if(customer.getWishList().size() > 5){
+            JOptionPane.showMessageDialog(null,
+                    "You added too many books to the wishlist", "Book Limit Exceded", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        customer.getWishList().add(book);
+
+        JOptionPane.showMessageDialog(null,
+                "You successfully add a book to your wishlist", "Success", JOptionPane.INFORMATION_MESSAGE);
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -237,6 +265,7 @@ public class BookScreen extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(BookScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new BookScreen(new Book("ratat"

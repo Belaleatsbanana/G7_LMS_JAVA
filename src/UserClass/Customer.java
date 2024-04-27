@@ -10,6 +10,7 @@ import java.io.Serializable;
 public class Customer extends User implements Serializable {
     private static final long serialVersionUID = 2032929425418533475L;
     private ArrayList<Borrow> borrowedBooks;
+    private ArrayList<Book> wishList;
     private LocalDate registrationDate;
     private Double totalFine;
     private String profileimage;
@@ -59,5 +60,13 @@ public class Customer extends User implements Serializable {
         this.totalFine = 0.0;
         this.borrowedBooks = new ArrayList<Borrow>();
         this.profileimage = "./assets/default.png";
+    }
+
+    public ArrayList<Book> getWishList() {
+        return wishList;
+    }
+
+    public void setWishList(ArrayList<Book> wishList) {
+        this.wishList = wishList;
     }
 }

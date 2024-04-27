@@ -4,41 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01101f23-3c87-4159-b352-936a9f833c40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G7 LMS.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/librarians.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookClass/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookClass/Borrow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookClass/Genre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookClass/Inventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookClass/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Screens/AddBookScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Screens/BookScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Screens/CartScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Screens/GenerateReportScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Screens/HomeScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Screens/LibrarianScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Screens/LoginScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Screens/ProfileScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Screens/SignupScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Screens/UpdateBookScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserClass/Author.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserClass/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserClass/Librarian.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserClass/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/books.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/borrowedbooks.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
-    </list>
+    <list default="true" id="01101f23-3c87-4159-b352-936a9f833c40" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +23,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/BookClass/Book.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Screens/SignupScreen.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -107,6 +76,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/youss/Downloads/G7_LMS_JAVA-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -117,7 +87,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.BookScreen">
+  <component name="RunManager">
     <configuration name="BookScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Screens.BookScreen" />
       <module name="G7 LMS" />
@@ -197,6 +167,7 @@
     <attachedChunks>
       <set>
         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
       </set>
     </attachedChunks>
   </component>
@@ -213,6 +184,7 @@
       <workItem from="1714036588094" duration="43877000" />
       <workItem from="1714129541953" duration="18793000" />
       <workItem from="1714205938325" duration="18221000" />
+      <workItem from="1714237717060" duration="1932000" />
     </task>
     <servers />
   </component>
@@ -225,15 +197,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Screens/SignupScreen.java</url>
-          <line>38</line>
-          <properties class="Screens.SignupScreen" method="initComponents">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.RuntimeException" package="java.lang" />
           <option name="timeStamp" value="14" />
