@@ -80,14 +80,23 @@
     "Application.AddBookScreen (3).executor": "Run",
     "Application.AddBookScreen.executor": "Run",
     "Application.BookScreen.executor": "Run",
+    "Application.CartScreen (1).executor": "Run",
+    "Application.CartScreen (2).executor": "Run",
     "Application.CartScreen.executor": "Run",
     "Application.GenerateReportScreen.executor": "Run",
+    "Application.HomeScreen (1).executor": "Run",
+    "Application.HomeScreen (2).executor": "Run",
+    "Application.HomeScreen (3).executor": "Run",
+    "Application.HomeScreen (4).executor": "Run",
+    "Application.HomeScreen (5).executor": "Run",
     "Application.HomeScreen.executor": "Run",
     "Application.LibrarianScreen (1).executor": "Run",
     "Application.LibrarianScreen (2).executor": "Run",
     "Application.LibrarianScreen.executor": "Run",
     "Application.LoginScreen.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.ProfileScreen (1).executor": "Run",
+    "Application.ProfileScreen (2).executor": "Run",
     "Application.ProfileScreen.executor": "Run",
     "Application.SignupScreen.executor": "Run",
     "Application.Test.executor": "Run",
@@ -103,13 +112,14 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.LibrarianScreen">
-    <configuration name="AddBookScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Screens.AddBookScreen" />
+  <component name="RunManager" selected="Application.BookScreen">
+    <configuration name="BookScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Screens.BookScreen" />
       <module name="G7 LMS" />
       <extension name="coverage">
         <pattern>
@@ -121,8 +131,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibrarianScreen (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Screens.LibrarianScreen" />
+    <configuration name="CartScreen (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Screens.CartScreen" />
       <module name="G7 LMS" />
       <extension name="coverage">
         <pattern>
@@ -134,8 +144,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibrarianScreen (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Screens.LibrarianScreen" />
+    <configuration name="CartScreen (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Screens.CartScreen" />
       <module name="G7 LMS" />
       <extension name="coverage">
         <pattern>
@@ -147,8 +157,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibrarianScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Screens.LibrarianScreen" />
+    <configuration name="CartScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Screens.CartScreen" />
       <module name="G7 LMS" />
       <extension name="coverage">
         <pattern>
@@ -160,8 +170,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UpdateBookScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Screens.UpdateBookScreen" />
+    <configuration name="ProfileScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Screens.ProfileScreen" />
       <module name="G7 LMS" />
       <extension name="coverage">
         <pattern>
@@ -175,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LibrarianScreen" />
-        <item itemvalue="Application.LibrarianScreen (2)" />
-        <item itemvalue="Application.LibrarianScreen (1)" />
-        <item itemvalue="Application.AddBookScreen" />
-        <item itemvalue="Application.UpdateBookScreen" />
+        <item itemvalue="Application.BookScreen" />
+        <item itemvalue="Application.CartScreen" />
+        <item itemvalue="Application.CartScreen (1)" />
+        <item itemvalue="Application.ProfileScreen" />
+        <item itemvalue="Application.CartScreen (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +211,8 @@
       <workItem from="1713962662282" duration="9866000" />
       <workItem from="1713976745700" duration="4086000" />
       <workItem from="1714036588094" duration="43877000" />
-      <workItem from="1714129541953" duration="12202000" />
+      <workItem from="1714129541953" duration="18793000" />
+      <workItem from="1714205938325" duration="18221000" />
     </task>
     <servers />
   </component>

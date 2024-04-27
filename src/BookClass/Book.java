@@ -18,13 +18,13 @@ public class Book implements Serializable{
 
     private Double totalFare;
     // Default constructor
-    Book(String title, String author, String ISBN, Genre genreType, Status availability,
+    public Book(String title, String author, String ISBN, Genre genreType, Status availability,
          String description,String imagePath) {
         // Initialize attributes with default values
         this(title, author, ISBN, genreType, availability, description);
         this.imagePath=imagePath;
     }
-    Book(String title, String author, String ISBN, Genre genreType, Status availability,
+    public Book(String title, String author, String ISBN, Genre genreType, Status availability,
          String description) {
         // Initialize attributes with default values
         this.title = title;
@@ -39,6 +39,13 @@ public class Book implements Serializable{
 
     public Book() {
 
+    }
+
+    public Book(String title, String author, Genre genre, String imagePath) {
+        this.title = title;
+        this.author = author;
+        this.genreType = genre;
+        this.imagePath = imagePath;
     }
     // Getter methods
 

@@ -173,10 +173,16 @@ public class LoginScreen extends javax.swing.JFrame {
         } catch (IOException ignored) {}
 
         if (isLoginSuccessful()) {
-            HomeScreen home = new HomeScreen();
-            home.setVisible(true);
-            this.setVisible(false);
-            this.dispose();
+            String email = loginEmailField.getText();
+            for (Customer customer : Inventory.getCustomers()) {
+                if (customer.getEmail().equals(email)) {
+                    HomeScreen home = new HomeScreen(customer);
+                    home.setVisible(true);
+                    this.setVisible(false);
+                    this.dispose();
+                    return;
+                }
+            }
         } else
             JOptionPane.showMessageDialog(null, "email or password is not correct", "Input Error", JOptionPane.ERROR_MESSAGE);
     }

@@ -1,5 +1,10 @@
 package Screens;
 
+import BookClass.Book;
+import BookClass.Genre;
+import BookClass.Status;
+import UserClass.Customer;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -12,8 +17,9 @@ public class BookScreen extends javax.swing.JFrame {
     /**
      * Creates new form BookScreen
      */
-    public BookScreen() {
-
+    public BookScreen(Book book, Customer customer) {
+        this.book = book;
+        this.customer = customer;
         initComponents();
     }
 
@@ -24,31 +30,7 @@ public class BookScreen extends javax.swing.JFrame {
      */
     private void initComponents() {
 
-        JLabel bookImageLabel = new JLabel();
-        JScrollPane bookDescScrollPanel = new JScrollPane();
-        JTextArea bookDescTextArea = new JTextArea();
-        JLabel bookName = new JLabel();
-        JLabel isbnLabel = new JLabel();
-        JTextField bookISBNTextField = new JTextField();
-        JLabel bookTitleLabel = new JLabel();
-        JTextField bookTitleTextField = new JTextField();
-        JLabel bookAuthorLabel = new JLabel();
-        JTextField bookAuthorTextField = new JTextField();
-        JLabel bookGenreLabel = new JLabel();
-        JTextField bookGenreTextField = new JTextField();
-        JLabel bookAvailabilityLabel = new JLabel();
-        JTextField bookAvailabilityTextField = new JTextField();
-        JButton borrowButton = new JButton();
-        JComboBox<String> searchComboBox = new JComboBox<>();
-        JButton loginButton = new JButton();
-        JTextField searchTextField = new JTextField();
-        JButton profileButton = new JButton();
-        JButton searchButton = new JButton();
-        JButton signupButton = new JButton();
-        JButton cartButton = new JButton();
-        JButton logoButton = new JButton();
-        // Variables declaration - do not modify
-        JButton addCartButton = new JButton();
+
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,8 +74,20 @@ public class BookScreen extends javax.swing.JFrame {
         signupButton.setText("Sign up");
 
         cartButton.setText("Cart");
-
+        //cartButton.addActionListener(this::addToCartActionPerformed);
+        //  we will make youssef host!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         logoButton.setText("logo");
+
+        bookISBNTextField.setText(book.getISBN());
+        bookTitleTextField.setText(book.getTitle());
+        bookAuthorTextField.setText(book.getAuthor());
+        bookGenreTextField.setText(String.valueOf(book.getGenreType()));
+        bookAvailabilityTextField.setText(String.valueOf(book.getAvailability()));
+        bookDescTextArea.setText(book.getDescription());
+        ImageIcon image = new ImageIcon(book.getImagePath());
+        bookImageLabel.setIcon(image);
+        bookImageLabel.setText(null);
+
 
         addCartButton.setFont(new java.awt.Font("Segue UI", Font.BOLD, 14)); // NOI18N
         addCartButton.setText("Add to Cart");
@@ -214,6 +208,8 @@ public class BookScreen extends javax.swing.JFrame {
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
+
+
     }
 
     private void searchTextFieldActionPerformed(java.awt.event.ActionEvent evt) {
@@ -243,9 +239,40 @@ public class BookScreen extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new BookScreen().setVisible(true));
-    }
+        java.awt.EventQueue.invokeLater(() -> new BookScreen(new Book("ratat"
+                ,"nigga", "1234", Genre.FICTION, Status.AVAILABLE,
+                "Description","./assets/default.png"),null).setVisible(true));
 
+        // (String title, String author, String ISBN, Genre genreType, Status availability,
+        //         String description,String imagePath
+    }
+    Book book;
+    Customer customer;
+    JLabel bookImageLabel = new JLabel();
+    JScrollPane bookDescScrollPanel = new JScrollPane();
+    JTextArea bookDescTextArea = new JTextArea();
+    JLabel bookName = new JLabel();
+    JLabel isbnLabel = new JLabel();
+    JTextField bookISBNTextField = new JTextField();
+    JLabel bookTitleLabel = new JLabel();
+    JTextField bookTitleTextField = new JTextField();
+    JLabel bookAuthorLabel = new JLabel();
+    JTextField bookAuthorTextField = new JTextField();
+    JLabel bookGenreLabel = new JLabel();
+    JTextField bookGenreTextField = new JTextField();
+    JLabel bookAvailabilityLabel = new JLabel();
+    JTextField bookAvailabilityTextField = new JTextField();
+    JButton borrowButton = new JButton();
+    JComboBox<String> searchComboBox = new JComboBox<>();
+    JButton loginButton = new JButton();
+    JTextField searchTextField = new JTextField();
+    JButton profileButton = new JButton();
+    JButton searchButton = new JButton();
+    JButton signupButton = new JButton();
+    JButton cartButton = new JButton();
+    JButton logoButton = new JButton();
+    // Variables declaration - do not modify
+    JButton addCartButton = new JButton();
     // End of variables declaration
 }
 

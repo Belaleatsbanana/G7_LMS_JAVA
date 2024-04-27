@@ -12,6 +12,7 @@ public class Customer extends User implements Serializable {
     private ArrayList<Borrow> borrowedBooks;
     private LocalDate registrationDate;
     private Double totalFine;
+    private String profileimage;
 
 
     // Getters and Setters
@@ -27,6 +28,7 @@ public class Customer extends User implements Serializable {
         return totalFine;
     }
 
+    public String getProfileimage(){return profileimage;}
     public void setBorrowedBooks(ArrayList<Borrow> borrowedBooks) {
         this.borrowedBooks = borrowedBooks;
     }
@@ -35,17 +37,27 @@ public class Customer extends User implements Serializable {
         this.registrationDate = registrationDate;
     }
 
-
     public void setTotalFine(Double totalFine) {
         this.totalFine = totalFine;
     }
 
+    public void setProfileimage(String profileimage){this.profileimage=profileimage;}
     public Customer() {
         super();
+    }
+    public Customer(String username, String email, String password
+            ,String gender, String phone, String address, LocalDate dateOfBirth,String profileimage) {
+
+        this( username,  email,  password, gender,  phone,  address,  dateOfBirth);
+        this.profileimage = profileimage;
     }
     public Customer(String username, String email, String password
             ,String gender, String phone, String address, LocalDate dateOfBirth) {
 
         super(username,email,password,phone,address,dateOfBirth,gender);
+        this.registrationDate = LocalDate.now();
+        this.totalFine = 0.0;
+        this.borrowedBooks = new ArrayList<Borrow>();
+        this.profileimage = "./assets/default.png";
     }
 }

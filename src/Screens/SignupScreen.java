@@ -419,7 +419,7 @@ public class SignupScreen extends javax.swing.JFrame {
         }catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        HomeScreen home=new HomeScreen();
+        HomeScreen home=new HomeScreen(customer);
         home.setVisible(true);
         this.setVisible(false);
         this.dispose();

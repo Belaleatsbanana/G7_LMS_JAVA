@@ -2,6 +2,7 @@
 package Screens;
 
 import BookClass.Book;
+import BookClass.Inventory;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,7 +17,7 @@ public class GenerateReportScreen extends javax.swing.JFrame {
      * Creates new form GenerateReportScreen
      */
     public GenerateReportScreen(Book book) {
-        initComponents();this.book = book;
+        initComponents(); this.book = book;
     }
 
     /**
@@ -40,7 +41,7 @@ public class GenerateReportScreen extends javax.swing.JFrame {
         JLabel bookFareLabel = new JLabel();
         JTextField totalBookFareTextField = new JTextField();
         JLabel totalBookingLabel = new JLabel();
-        JTextField totalBookFareTextField1 = new JTextField();
+        JTextField totalBookingTextField = new JTextField();
         JLabel totalFareLabel = new JLabel();
         JTextField totalFareTextField = new JTextField();
 
@@ -67,10 +68,34 @@ public class GenerateReportScreen extends javax.swing.JFrame {
         totalBookingLabel.setFont(new java.awt.Font("Segue UI", Font.BOLD, 14)); // NOI18N
         totalBookingLabel.setText("The  total number of bookings in the system");
 
-        totalBookFareTextField1.addActionListener(this::totalBookFareTextField1ActionPerformed);
+        totalBookingTextField.addActionListener(this::totalBookFareTextField1ActionPerformed);
 
         totalFareLabel.setFont(new java.awt.Font("Segue UI", Font.BOLD, 14)); // NOI18N
         totalFareLabel.setText("The total fare collected from bookings in the system");
+
+
+        bookISBNTextField.setText(book.getISBN());
+        bookISBNTextField.setEditable(false);
+
+        bookTitleTextField.setText(book.getTitle());
+        bookTitleTextField.setEditable(false);
+
+        bookAuthorTextField.setText(book.getAuthor());
+        bookAuthorTextField.setEditable(false);
+
+        bookGenreTextField.setText(String.valueOf(book.getGenreType()));
+        bookGenreTextField.setEditable(false);
+
+        totalBookFareTextField.setText(String.valueOf(book.getTotalFare()));
+        totalBookFareTextField.setEditable(false);
+
+        totalBookingTextField.setText(String.valueOf(Inventory.getBorrowedBooks().size()));
+        Double totalFare = 0.0;
+        for(Book b : Inventory.getBooks()){
+            if(b.getTotalFare() != null)
+                totalFare += b.getTotalFare();
+        }
+        totalFareTextField.setText(String.valueOf(totalFare));
 
         totalFareTextField.addActionListener(this::totalFareTextFieldActionPerformed);
 
@@ -109,7 +134,7 @@ public class GenerateReportScreen extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                         .addComponent(totalFareTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(totalBookFareTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))
+                                                        .addComponent(totalBookingTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))
                                 .addContainerGap(75, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -142,7 +167,7 @@ public class GenerateReportScreen extends javax.swing.JFrame {
                                 .addGap(55, 55, 55)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(totalBookingLabel)
-                                        .addComponent(totalBookFareTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(totalBookingTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(totalFareLabel)
@@ -200,7 +225,7 @@ public class GenerateReportScreen extends javax.swing.JFrame {
     JLabel bookFareLabel = new JLabel();
     JTextField totalBookFareTextField = new JTextField();
     JLabel totalBookingLabel = new JLabel();
-    JTextField totalBookFareTextField1 = new JTextField();
+    JTextField totalBookingTextField = new JTextField();
     JLabel totalFareLabel = new JLabel();
     JTextField totalFareTextField = new JTextField();
     // End of variables declaration
